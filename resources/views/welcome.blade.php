@@ -21,15 +21,15 @@
                     @if (Route::has('login'))
                         @auth
                             <li class="nav-item">
-                                <a href="{{ url('/home') }}" class="nav-link">Home</a>
+                                <a href="{{ url('/home') }}" class="nav-link" wire:navigate>Home</a>
                             </li>
                         @else
                             <li class="nav-item">
-                                <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                                <a href="{{ route('login') }}" class="nav-link" wire:navigate>Log in</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a href="{{ route('register') }}" class="nav-link">Register</a>
+                                    <a href="{{ route('register') }}" class="nav-link" wire:navigate>Register</a>
                                 </li>
                             @endif
                         @endauth
@@ -45,7 +45,7 @@
                 <h1 class="display-4 mb-4">Welcome to Laravel</h1>
                 <p class="lead mb-4">Bootstrap 5 is now installed and ready to use!</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="https://laravel.com/docs" class="btn btn-primary btn-lg px-4 gap-3">
+                    <a href="https://laravel.com/docs" class="btn btn-primary btn-lg px-4 gap-3" wire:navigate>
                         <i class="bi bi-book"></i> Documentation
                     </a>
                     <a href="https://github.com/laravel/laravel" class="btn btn-outline-secondary btn-lg px-4">

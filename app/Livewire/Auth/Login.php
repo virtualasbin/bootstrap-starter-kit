@@ -23,7 +23,7 @@ class Login extends Component
 
         if (Auth::attempt($credentials, $this->remember)) {
             session()->regenerate();
-            return redirect()->intended(RouteServiceProvider::HOME);
+            return redirect()->intended(route('home'));
         }
 
         $this->addError('email', trans('auth.failed'));
