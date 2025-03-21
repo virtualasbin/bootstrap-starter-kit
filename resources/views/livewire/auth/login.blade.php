@@ -8,7 +8,8 @@
                     <form wire:submit="login">
                         <div class="mb-3">
                             <label for="email" class="form-label">{{ __('Email') }}</label>
-                            <input wire:model="email" type="email" class="form-control @error('email') is-invalid @enderror" id="email">
+                            <input wire:model="email" type="email"
+                                class="form-control @error('email') is-invalid @enderror" id="email">
                             @error('email')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -16,7 +17,8 @@
 
                         <div class="mb-3">
                             <label for="password" class="form-label">{{ __('Password') }}</label>
-                            <input wire:model="password" type="password" class="form-control @error('password') is-invalid @enderror" id="password">
+                            <input wire:model="password" type="password"
+                                class="form-control @error('password') is-invalid @enderror" id="password">
                             @error('password')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
