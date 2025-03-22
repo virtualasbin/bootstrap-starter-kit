@@ -5,7 +5,7 @@
                 <div class="card-body p-4">
                     <h4 class="card-title mb-4">Reset Password</h4>
 
-                    <form wire:submit="resetPassword">
+                    <form wire:submit.prevent="resetPassword">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input wire:model="email" type="email" class="form-control" id="email" required>

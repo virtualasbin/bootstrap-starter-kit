@@ -8,7 +8,7 @@
                         This is a secure area of the application. Please confirm your password before continuing.
                     </p>
 
-                    <form wire:submit="confirmPassword">
+                    <form wire:submit.prevent="confirmPassword">
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input wire:model="password" type="password" class="form-control" id="password" required

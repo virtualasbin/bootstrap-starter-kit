@@ -5,7 +5,7 @@
                 <div class="card-body p-4">
                     <h4 class="card-title mb-4">Register</h4>
 
-                    <form wire:submit="register">
+                    <form wire:submit.prevent="register">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input wire:model="name" type="text" class="form-control" id="name" required autofocus>

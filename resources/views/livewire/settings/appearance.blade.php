@@ -24,10 +24,6 @@
                         </label>
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary btn-sm">
-                    <i class="bi bi-check-lg me-1"></i> Save Changes
-                </button>
             </form>
         </div>
     </div>

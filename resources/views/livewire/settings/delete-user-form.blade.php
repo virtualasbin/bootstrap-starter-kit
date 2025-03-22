@@ -13,7 +13,7 @@
             aria-labelledby="confirmUserDeletionModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form wire:submit="deleteUser">
+                    <form wire:submit.prevent="deleteUser">
                         <div class="modal-header">
                             <h5 class="modal-title" id="confirmUserDeletionModalLabel">Are you sure?</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

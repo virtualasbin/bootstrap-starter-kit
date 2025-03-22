@@ -4,7 +4,7 @@
             <h5 class="card-title">Profile Information</h5>
             <p class="text-muted">Update your account's profile information and email address.</p>
 
-            <form wire:submit="updateProfileInformation" class="mt-4">
+            <form wire:submit.prevent="updateProfileInformation" class="mt-4">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input wire:model="name" type="text" class="form-control" id="name" required>

@@ -4,7 +4,7 @@
             <h5 class="card-title">Update Password</h5>
             <p class="text-muted">Ensure your account is using a long, random password to stay secure.</p>
 
-            <form wire:submit="updatePassword" class="mt-4">
+            <form wire:submit.prevent="updatePassword" class="mt-4">
                 <div class="mb-3">
                     <label for="current_password" class="form-label">Current Password</label>
                     <input wire:model="current_password" type="password" class="form-control" id="current_password"

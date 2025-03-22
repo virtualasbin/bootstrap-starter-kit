@@ -12,7 +12,7 @@
                         </div>
                     @endif
 
-                    <form wire:submit="sendPasswordResetLink">
+                    <form wire:submit.prevent="sendPasswordResetLink">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input wire:model="email" type="email" class="form-control" id="email" required autofocus>

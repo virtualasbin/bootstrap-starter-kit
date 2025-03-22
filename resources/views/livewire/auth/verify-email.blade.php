@@ -14,13 +14,13 @@
                     @endif
 
                     <div class="d-flex justify-content-between align-items-center">
-                        <form wire:submit="sendVerification">
+                        <form wire:submit.prevent="sendVerification">
                             <button type="submit" class="btn btn-link btn-sm p-0 m-0">
                                 Resend Verification Email
                             </button>
                         </form>
 
-                        <form wire:submit="logout" class="ms-2">
+                        <form wire:submit.prevent="logout" class="ms-2">
                             <button type="submit" class="btn btn-link btn-sm text-danger p-0 m-0">
                                 Log Out
                             </button>
