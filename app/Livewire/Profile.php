@@ -14,6 +14,7 @@ class Profile extends Component
     public $current_password;
     public $new_password;
     public $new_password_confirmation;
+    public string $activeTab = 'details';
 
     protected $rules = [
         'name' => 'required|min:3',
@@ -24,6 +25,7 @@ class Profile extends Component
 
     public function mount()
     {
+        $this->activeTab = session('profile_tab', 'details');
         $this->user = auth()->user();
         $this->name = $this->user->name;
         $this->email = $this->user->email;
@@ -48,6 +50,11 @@ class Profile extends Component
         $this->reset(['current_password', 'new_password', 'new_password_confirmation']);
         $this->dispatch('user-updated', user: $this->user);
         session()->flash('message', 'Profile updated successfully.');
+    }
+
+    public function updatedActiveTab($value)
+    {
+        session(['profile_tab' => $value]);
     }
 
     public function render()

@@ -18,18 +18,25 @@
                 <div class="card-body">
                     <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="details-tab" data-bs-toggle="tab"
-                                data-bs-target="#details" type="button" role="tab">Profile Details</button>
+                            <button wire:click="$set('activeTab', 'details')"
+                                class="nav-link {{ $activeTab === 'details' ? 'active' : '' }}" id="details-tab"
+                                data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab">
+                                Profile Details
+                            </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="password-tab" data-bs-toggle="tab" data-bs-target="#password"
-                                type="button" role="tab">Change Password</button>
+                            <button wire:click="$set('activeTab', 'password')"
+                                class="nav-link {{ $activeTab === 'password' ? 'active' : '' }}" id="password-tab"
+                                data-bs-toggle="tab" data-bs-target="#password" type="button" role="tab">
+                                Change Password
+                            </button>
                         </li>
                     </ul>
 
                     <form wire:submit="updateProfile">
                         <div class="tab-content" id="profileTabsContent">
-                            <div class="tab-pane fade show active" id="details" role="tabpanel">
+                            <div class="tab-pane fade {{ $activeTab === 'details' ? 'show active' : '' }}" id="details"
+                                role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="name" class="form-label">Name</label>
@@ -47,7 +54,8 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="password" role="tabpanel">
+                            <div class="tab-pane fade {{ $activeTab === 'password' ? 'show active' : '' }}"
+                                id="password" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
                                         <label for="current_password" class="form-label">Current Password</label>
