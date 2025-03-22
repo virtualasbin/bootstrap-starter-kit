@@ -32,6 +32,14 @@ jobs:
           version_format: "${major}.${minor}.${patch}"
           bump_each_commit: true
           
+      - name: Delete Previous Release
+        if: ${{ steps.version.outputs.version != steps.previoustag.outputs.tag }}
+        uses: dev-drprasad/delete-tag-and-release@v1.0
+        with:
+          tag_name: ${{ steps.previoustag.outputs.tag }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          delete_release: true
+
       - name: Create Release
         if: ${{ steps.version.outputs.version != steps.previoustag.outputs.tag }}
         uses: softprops/action-gh-release@v1
