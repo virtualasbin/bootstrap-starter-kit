@@ -4,7 +4,6 @@ namespace App\Livewire\Settings;
 
 use App\Models\Setting;
 use Livewire\Component;
-use Livewire\Attributes\On;
 use Livewire\Attributes\Layout;
 
 #[Layout('components.layouts.app')]
@@ -27,11 +26,5 @@ class Appearance extends Component
     {
         Setting::set('theme', $this->theme);
         $this->dispatch('settings-saved');
-    }
-
-    #[On('settings-saved')]
-    public function render()
-    {
-        return view('livewire.settings.appearance');
     }
 }

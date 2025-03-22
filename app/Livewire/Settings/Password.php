@@ -18,11 +18,6 @@ class Password extends Component
 
     public string $password_confirmation = '';
 
-    public function render()
-    {
-        return view('livewire.settings.password')->layout('components.layouts.app')->slot('slot');
-    }
-
     /**
      * Update the password for the currently authenticated user.
      */

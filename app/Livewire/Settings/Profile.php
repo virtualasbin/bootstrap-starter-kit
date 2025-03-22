@@ -25,11 +25,6 @@ class Profile extends Component
         $this->email = Auth::user()->email;
     }
 
-    public function render()
-    {
-        return view('livewire.settings.profile')->layout('components.layouts.app')->slot('slot');
-    }
-
     /**
      * Update the profile information for the currently authenticated user.
      */
@@ -57,8 +52,6 @@ class Profile extends Component
         }
 
         $user->save();
-
-        $this->dispatch('profile-updated', name: $user->name);
     }
 
     /**
