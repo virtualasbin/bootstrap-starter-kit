@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "flightsadmin/bootstrap-starter-kit",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "A modern Laravel starter kit featuring a clean Bootstrap 5 design, Livewire, and essential authentication workflows.",
     "keywords": [
         "laravel",
         "framework"
