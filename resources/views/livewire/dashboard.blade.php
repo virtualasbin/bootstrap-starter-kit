@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-2 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h3 class="fw-semibold">Dashboard</h3>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
                 <button type="button" class="btn btn-sm btn-outline-primary">
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="row g-3 mb-3">
+    <div class="row g-2">
         <div class="col-md-6 col-lg-3">
             <div class="card">
                 <div class="card-body">
