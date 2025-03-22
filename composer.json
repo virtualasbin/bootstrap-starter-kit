@@ -50,7 +50,7 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi",
-            "npm install --graceful --no-bin-links --no-audit",
+            "npm install --no-bin-links --no-audit",
             "npm run build"
         ],
         "dev": [
