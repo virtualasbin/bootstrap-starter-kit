@@ -12,7 +12,8 @@
 <body class="min-vh-100">
     <!-- Sidebar -->
     <div class="d-flex min-vh-100">
-        <div class="sidebar bg-light border-end position-fixed h-100 d-none d-lg-block" style="width: 280px">
+        <div class="sidebar bg-{{ app('settings') }} border-end position-fixed h-100 d-none d-lg-block"
+            style="width: 280px">
             {{ $sidebar ?? '' }}
         </div>
         <div class="sidebar-mobile position-fixed h-100 bg-light border-end collapse d-lg-none"

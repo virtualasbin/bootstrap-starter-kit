@@ -13,18 +13,18 @@ class Appearance extends Component
 
     public function mount()
     {
-        $this->theme = Setting::get('appearance.theme', 'light');
+        $this->theme = Setting::get('theme', 'light');
     }
 
     public function updatedTheme($value)
     {
-        Setting::set('appearance.theme', $value);
+        Setting::set('theme', $value);
         $this->dispatch('settings-saved');
     }
 
     public function saveAppearance()
     {
-        Setting::set('appearance.theme', $this->theme);
+        Setting::set('theme', $this->theme);
         $this->dispatch('settings-saved');
     }
 

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Setting::create([
-            'key' => 'appearance.theme',
+            'key' => 'theme',
             'value' => 'system',
         ]);
     }
