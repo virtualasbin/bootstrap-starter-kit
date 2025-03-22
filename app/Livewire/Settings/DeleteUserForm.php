@@ -6,6 +6,7 @@ use App\Livewire\Actions\Logout;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
+#[Layout('components.layouts.app')]
 class DeleteUserForm extends Component
 {
     public string $password = '';
@@ -22,5 +23,10 @@ class DeleteUserForm extends Component
         tap(Auth::user(), $logout(...))->delete();
 
         $this->redirect('/', navigate: true);
+    }
+
+    public function render()
+    {
+        return view('livewire.settings.delete-user-form');
     }
 }

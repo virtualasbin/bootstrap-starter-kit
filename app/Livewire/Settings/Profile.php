@@ -3,11 +3,13 @@
 namespace App\Livewire\Settings;
 
 use App\Models\User;
+use Livewire\Component;
+use Illuminate\Validation\Rule;
+use Livewire\Attributes\Layout;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Validation\Rule;
-use Livewire\Component;
 
+#[Layout('components.layouts.app')]
 class Profile extends Component
 {
     public string $name = '';
@@ -21,6 +23,11 @@ class Profile extends Component
     {
         $this->name = Auth::user()->name;
         $this->email = Auth::user()->email;
+    }
+
+    public function render()
+    {
+        return view('livewire.settings.profile')->layout('components.layouts.app')->slot('slot');
     }
 
     /**
