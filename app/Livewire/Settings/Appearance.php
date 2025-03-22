@@ -16,10 +16,9 @@ class Appearance extends Component
         $this->theme = Setting::get('appearance.theme', 'light');
     }
 
-    public function setTheme($theme)
+    public function updatedTheme($value)
     {
-        $this->theme = $theme;
-        Setting::set('appearance.theme', $theme);
+        Setting::set('appearance.theme', $value);
         $this->dispatch('settings-saved');
     }
 
