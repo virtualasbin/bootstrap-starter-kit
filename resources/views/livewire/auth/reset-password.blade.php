@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card shadow-sm">
                 <div class="card-body p-4">
                     <h4 class="card-title mb-4">Reset Password</h4>
