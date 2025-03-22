@@ -27,3 +27,9 @@
         }
     }
 }
+
+.ps-lg-280px {
+    @include media-breakpoint-up(lg) {
+        padding-left: 280px;
+    }
+}

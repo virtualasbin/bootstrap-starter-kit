@@ -20,10 +20,10 @@
                     <i class="bi bi-calendar3 me-1"></i> This week
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This week</a></li>
-                    <li><a class="dropdown-item" href="#">This month</a></li>
-                    <li><a class="dropdown-item" href="#">This year</a></li>
+                    <li><a class="dropdown-item bi bi-calendar-day" href="#"> Today</a></li>
+                    <li><a class="dropdown-item bi bi-calendar-week" href="#"> This week</a></li>
+                    <li><a class="dropdown-item bi bi-calendar-month" href="#"> This month</a></li>
+                    <li><a class="dropdown-item bi bi-calendar3" href="#"> This year</a></li>
                 </ul>
             </div>
         </div>
