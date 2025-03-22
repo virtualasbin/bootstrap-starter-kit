@@ -107,4 +107,4 @@ A modern Laravel starter kit featuring a clean Bootstrap 5 design, Livewire, and
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+This starter kit is open-sourced software licensed under the MIT license.
