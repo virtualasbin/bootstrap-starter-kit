@@ -6,7 +6,7 @@
 
         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
             data-bs-target="#confirmUserDeletionModal">
-            Delete Account
+            <i class="bi bi-trash3 me-1"></i> Delete Account
         </button>
 
         <!-- Modal -->
@@ -33,7 +33,9 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary btn-sm"
                                 data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger btn-sm">Delete Account</button>
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash3 me-1"></i> Delete Account
+                            </button>
                         </div>
                     </form>
                 </div>
