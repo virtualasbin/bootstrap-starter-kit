@@ -11,7 +11,7 @@
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+            <a class="navbar-brand d-flex align-items-center fs-4" href="{{ url('/') }}">
                 <i class="bi bi-boxes text-primary me-2"></i>
                 <span class="fw-semibold">{{ config('app.name') }}</span>
             </a>

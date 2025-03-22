@@ -1,8 +1,8 @@
 <div class="d-flex flex-column h-100">
-    <div class="p-4 border-bottom">
-        <a href="{{ route('home') }}" class="text-decoration-none">
+    <div class="px-4 py-2 border-bottom">
+        <a href="{{ route('home') }}" class="text-decoration-none fs-4">
             <i class="bi bi-boxes text-primary me-2"></i>
-            <span class="fs-4 fw-semibold text-primary">{{ config('app.name') }}</span>
+            <span class="fw-semibold text-primary">{{ config('app.name') }}</span>
         </a>
     </div>
 
