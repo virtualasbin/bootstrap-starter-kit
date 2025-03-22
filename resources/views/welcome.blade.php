@@ -8,79 +8,70 @@
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <i class="bi bi-boxes text-primary me-2"></i>
+                <span class="fw-semibold">{{ config('app.name') }}</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    @auth
-                        <li class="nav-item">
-                            <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a href="{{ route('login') }}" class="nav-link">Log in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link">Register</a>
-                        </li>
-                    @endauth
-                </ul>
+            <div class="d-flex gap-2">
+                @auth
+                    <a href="{{ route('dashboard') }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-grid me-2"></i>Dashboard
+                    </a>
+                @else
+                    <a href="{{ route('login') }}" class="btn btn-sm btn-outline-primary">Sign in</a>
+                    <a href="{{ route('register') }}" class="btn btn-sm btn-primary">Get started</a>
+                @endauth
             </div>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold text-body-emphasis">Welcome to {{ config('app.name', 'Laravel') }}</h1>
+    <main class="flex-shrink-0">
+        <div class="px-4 py-5 text-center">
             <div class="col-lg-6 mx-auto">
+                <h1 class="display-5 fw-bold text-body-emphasis mb-3">Bootstrap Starter Kit</h1>
                 <p class="lead mb-4">
-                    Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular
-                    front-end open source toolkit.
+                    A simple and modern starter kit built with Laravel and Bootstrap 5. Everything you need to start
+                    your next project.
                 </p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="{{ route('register') }}" class="btn btn-primary btn-sm px-4 gap-3">Get Started</a>
-                    <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-sm px-4">Sign In</a>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="{{ route('register') }}" class="btn btn-sm btn-primary px-4">
+                        <i class="bi bi-rocket me-2"></i>Get Started
+                    </a>
+                    <a href="https://github.com/flightsadmin/bootstrap-starter-kit"
+                        class="btn btn-sm btn-outline-secondary px-4" target="_blank">
+                        <i class="bi bi-github me-2"></i>Source Code
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Features Section -->
-        <div class="container px-4 py-5">
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div class="col d-flex align-items-start">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4">Feature One</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
+        <div class="container py-5">
+            <div class="row g-4 row-cols-1 row-cols-md-3 text-center">
+                <div class="col">
+                    <i class="bi bi-lightning-charge fs-2 text-primary mb-3"></i>
+                    <h3>Fast</h3>
+                    <p class="text-muted">Built for speed and performance</p>
                 </div>
-                <div class="col d-flex align-items-start">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4">Feature Two</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
+                <div class="col">
+                    <i class="bi bi-shield-check fs-2 text-primary mb-3"></i>
+                    <h3>Secure</h3>
+                    <p class="text-muted">Security features built-in</p>
                 </div>
-                <div class="col d-flex align-items-start">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4">Feature Three</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
+                <div class="col">
+                    <i class="bi bi-gear fs-2 text-primary mb-3"></i>
+                    <h3>Flexible</h3>
+                    <p class="text-muted">Easy to customize</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="py-3 my-4">
-        <div class="container">
-            <p class="text-center text-body-secondary">© {{ date('Y') }} {{ config('app.name', 'Laravel') }}. All rights
-                reserved.</p>
+    <footer class="footer mt-auto py-2 border-top">
+        <div class="container text-center">
+            <span class="text-muted">&copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.</span>
         </div>
     </footer>
 </body>
