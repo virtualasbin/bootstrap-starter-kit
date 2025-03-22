@@ -46,8 +46,8 @@
                     front-end open source toolkit.
                 </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="{{ route('register') }}" class="btn btn-primary btn-lg px-4 gap-3">Get Started</a>
-                    <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-lg px-4">Sign In</a>
+                    <a href="{{ route('register') }}" class="btn btn-primary btn-sm px-4 gap-3">Get Started</a>
+                    <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-sm px-4">Sign In</a>
                 </div>
             </div>
         </div>

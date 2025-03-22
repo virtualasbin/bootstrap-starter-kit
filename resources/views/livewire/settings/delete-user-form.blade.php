@@ -4,7 +4,7 @@
         <p class="text-muted">Once your account is deleted, all of its resources and data will be permanently deleted.
         </p>
 
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmUserDeletionModal">
+        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmUserDeletionModal">
             Delete Account
         </button>
 
@@ -30,8 +30,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete Account</button>
+                            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger btn-sm">Delete Account</button>
                         </div>
                     </form>
                 </div>

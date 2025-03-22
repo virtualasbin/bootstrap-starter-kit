@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Log in</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Log in</button>
                         </div>
 
                         <div class="mt-3 text-center">

@@ -25,7 +25,9 @@
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Reset Password</button>
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="bi bi-key me-1"></i> Reset Password
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -25,7 +25,9 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="bi bi-check-lg me-1"></i> Update Password
+                    </button>
                 </div>
             </form>
         </div>

@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Register</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Register</button>
                         </div>
 
                         <div class="mt-3 text-center">

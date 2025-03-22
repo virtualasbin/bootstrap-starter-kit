@@ -13,12 +13,6 @@
                     <i class="bi bi-grid me-2"></i> Dashboard
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link d-flex align-items-center {{ request()->routeIs('settings.*') ? 'active' : '' }}"
-                    wire:navigate href="{{ route('settings.profile') }}">
-                    <i class="bi bi-sliders me-2"></i> Settings
-                </a>
-            </li>
         </ul>
     </div>
 

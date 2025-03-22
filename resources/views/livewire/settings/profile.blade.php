@@ -20,7 +20,7 @@
                         <div class="mt-2">
                             <p class="text-muted">
                                 Your email address is unverified.
-                                <button type="button" class="btn btn-link p-0 m-0 align-baseline"
+                                <button type="button" class="btn btn-link btn-sm p-0 m-0 align-baseline"
                                     wire:click="resendVerificationNotification">
                                     Click here to re-send the verification email.
                                 </button>
@@ -34,7 +34,9 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="bi bi-check-lg me-1"></i> Save Changes
+                    </button>
                 </div>
             </form>
         </div>

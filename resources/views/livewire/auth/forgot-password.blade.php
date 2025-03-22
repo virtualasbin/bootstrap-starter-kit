@@ -21,9 +21,11 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <a href="{{ route('login') }}" class="text-decoration-none">
-                                <i class="bi bi-arrow-left"></i> Back to login
+                                <i class="bi bi-arrow-left me-1"></i> Back to login
                             </a>
-                            <button type="submit" class="btn btn-primary">Email Password Reset Link</button>
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="bi bi-send me-1"></i> Email Password Reset Link
+                            </button>
                         </div>
                     </form>
                 </div>
