@@ -3,41 +3,41 @@
 namespace App\Livewire\Auth;
 
 use App\Models\User;
-use Livewire\Component;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Providers\RouteServiceProvider;
+use Illuminate\Validation\Rules;
+use Livewire\Attributes\Layout;
+use Livewire\Component;
 
+#[Layout('components.layouts.auth')]
 class Register extends Component
 {
-    public $name = '';
-    public $email = '';
-    public $password = '';
-    public $password_confirmation = '';
+    public string $name = '';
 
-    protected $rules = [
-        'name' => 'required|min:3',
-        'email' => 'required|email|unique:users',
-        'password' => 'required|min:8|confirmed',
-    ];
+    public string $email = '';
 
-    public function register()
+    public string $password = '';
+
+    public string $password_confirmation = '';
+
+    /**
+     * Handle an incoming registration request.
+     */
+    public function register(): void
     {
-        $validated = $this->validate();
-
-        $user = User::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
+        $validated = $this->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        $validated['password'] = Hash::make($validated['password']);
+
+        event(new Registered(($user = User::create($validated))));
 
         Auth::login($user);
 
-        return redirect(route('home'));
-    }
-
-    public function render()
-    {
-        return view('livewire.auth.register');
+        $this->redirect(route('dashboard', absolute: false), navigate: true);
     }
 }
