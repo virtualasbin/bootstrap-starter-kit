@@ -32,42 +32,49 @@ A modern Laravel starter kit featuring a clean Bootstrap 5 design, Livewire, and
 - PHP >= 8.1
 - Composer
 - Node.js & NPM
-- MySQL or PostgreSQL
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/bootstrap-starter-kit.git
-cd bootstrap-starter-kit
-```
+1. Using Laravel Installer:
+    ```bash
+    laravel new bootstrap-starter-kit --using=flightsadmin/bootstrap-starter-kit
+    cd bootstrap-starter-kit
+    ```
 
-2. Install PHP dependencies:
-```bash
-composer install
-```
+2. Using Git
 
-3. Install and compile frontend dependencies:
-```bash
-npm install
-npm run dev
-```
+    - Clone the repository:
+        ```bash
+        git clone https://github.com/flighsadmin/bootstrap-starter-kit.git
+        cd bootstrap-starter-kit
+        ```
 
-4. Configure environment:
-```bash
-cp .env.example .env
-php artisan key:generate
-```
+    - Install PHP dependencies:
+        ```bash
+        composer install
+        ```
 
-5. Configure your database in `.env` and run migrations:
-```bash
-php artisan migrate
-```
+    - Install and compile frontend dependencies:
+        ```bash
+        npm install
+        npm run dev
+        ```
 
-6. Start the development server:
-```bash
-php artisan serve
-```
+    - Configure environment:
+        ```bash
+        cp .env.example .env
+        php artisan key:generate
+        ```
+
+    - Configure your database in `.env` and run migrations:
+        ```bash
+        php artisan migrate
+        ```
+
+    - Start the development server:
+        ```bash
+        php artisan serve
+        ```
 
 ## Usage
 
