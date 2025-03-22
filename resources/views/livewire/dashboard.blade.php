@@ -112,7 +112,7 @@
                 <div class="card-header bg-transparent border-0">
                     <div class="d-flex align-items-center justify-content-between">
                         <h5 class="mb-0">Recent Activity</h5>
-                        <button class="btn btn-sm btn-light">View All</button>
+                        <button class="btn btn-sm">View All</button>
                     </div>
                 </div>
                 <div class="card-body p-0">

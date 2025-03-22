@@ -4,6 +4,7 @@ namespace App\Livewire\Settings;
 
 use App\Models\Setting;
 use Livewire\Component;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Layout;
 
 #[Layout('components.layouts.app')]
@@ -28,8 +29,9 @@ class Appearance extends Component
         $this->dispatch('settings-saved');
     }
 
+    #[On('settings-saved')]
     public function render()
     {
-        return view('livewire.settings.appearance')->layout('components.layouts.app')->slot('slot');
+        return view('livewire.settings.appearance');
     }
 }

@@ -8,22 +8,16 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
     public function register(): void
     {
         //
     }
 
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
-        $this->app->singleton("settings", function () {
-            Cache::rememberForever("settings", function () {
-                return Setting::all()->pluck('value', 'key');
+        $this->app->singleton('settings', function () {
+            return Cache::rememberForever('settings', function () {
+                return Setting::all()->pluck('value', 'key')->toArray();
             });
         });
     }

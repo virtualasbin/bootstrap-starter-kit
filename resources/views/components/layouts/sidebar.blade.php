@@ -19,8 +19,7 @@
 
     <div class="p-3 border-top">
         <div class="dropdown">
-            <button class="btn btn-light d-flex align-items-center gap-2 w-100 border" type="button"
-                data-bs-toggle="dropdown">
+            <button class="btn  d-flex align-items-center gap-2 w-100 border" type="button" data-bs-toggle="dropdown">
                 <i class="bi bi-person-circle fs-6"></i>
                 <div class="flex-grow-1 text-start text-truncate">{{ auth()->user()->name }}</div>
                 <i class="bi bi-chevron-expand"></i>

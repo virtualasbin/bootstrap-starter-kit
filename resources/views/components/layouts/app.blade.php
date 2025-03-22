@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="{{ app('settings')['theme']}}">
 
 <head>
     <meta charset="utf-8">
@@ -12,8 +12,7 @@
 <body class="min-vh-100">
     <!-- Sidebar -->
     <div class="d-flex min-vh-100">
-        <div class="sidebar bg-{{ app('settings') }} border-end position-fixed h-100 d-none d-lg-block"
-            style="width: 280px">
+        <div class="sidebar border-end position-fixed h-100 d-none d-lg-block" style="width: 280px">
             {{ $sidebar ?? '' }}
         </div>
         <div class="sidebar-mobile position-fixed h-100 bg-light border-end collapse d-lg-none"

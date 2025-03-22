@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         Setting::create([
             'key' => 'theme',
-            'value' => 'system',
+            'value' => 'light',
         ]);
     }
 }

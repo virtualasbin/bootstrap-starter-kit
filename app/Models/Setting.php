@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model
@@ -10,15 +11,19 @@ class Setting extends Model
 
     public static function get($key, $default = null)
     {
-        $setting = static::where('key', $key)->first();
-        return $setting ? $setting->value : $default;
+        $settings = app('settings');
+        return $settings[$key] ?? $default;
     }
 
     public static function set($key, $value)
     {
-        return static::updateOrCreate(
+        $setting = static::updateOrCreate(
             ['key' => $key],
             ['value' => $value]
         );
+
+        Cache::forget('settings');
+
+        return $setting;
     }
 }
