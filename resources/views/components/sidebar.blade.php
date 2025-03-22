@@ -1,10 +1,10 @@
 <div class="col-md-3 col-lg-2 bg-dark text-white px-0 position-fixed h-100" wire:ignore.self>
     <div class="d-flex flex-column h-100">
         <div class="p-3">
-            <a href="{{ route('home') }}" wire:wire:navigate
+            <a href="{{ route('home') }}" wire:navigate
                 class="d-flex align-items-center text-white text-decoration-none">
-                <i class="bi bi-bootstrap fs-5 me-2"></i>
-                <span class="fs-5">Dashboard</span>
+                <i class="bi bi-github fs-4 me-2"></i>
+                <span class="fs-4">{{ config('app.name', 'Laravel')}}</span>
             </a>
         </div>
         <ul class="nav flex-column mb-auto">
