@@ -1,9 +1,10 @@
 <div class="col-md-3 col-lg-2 bg-dark text-white px-0 position-fixed h-100" wire:ignore.self>
     <div class="d-flex flex-column h-100">
         <div class="p-3">
-            <a href="#" class="d-flex align-items-center text-white text-decoration-none">
-                <i class="bi bi-bootstrap fs-4 me-2"></i>
-                <span class="fs-4">Dashboard</span>
+            <a href="{{ route('home') }}" wire:wire:navigate
+                class="d-flex align-items-center text-white text-decoration-none">
+                <i class="bi bi-bootstrap fs-5 me-2"></i>
+                <span class="fs-5">Dashboard</span>
             </a>
         </div>
         <ul class="nav flex-column mb-auto">
@@ -23,13 +24,13 @@
             </li>
         </ul>
 
-        <div class="dropdown p-3 mt-auto">
-            <button class="btn btn-dark dropdown-toggle rounded-0 w-100 text-start" type="button"
+        <div class="dropdown p-3 mt-auto position-relative">
+            <button class="btn btn-dark dropdown-toggle rounded-0 text-start w-100" type="button"
                 data-bs-toggle="dropdown">
                 <i class="bi bi-person-circle me-2"></i>
                 {{ $user->name }}
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark rounded-0 w-100">
+            <ul class="dropdown-menu dropdown-menu-dark rounded-0">
                 <li>
                     <a class="dropdown-item" href="{{ route('profile') }}" wire:navigate>
                         <i class="bi bi-person me-2"></i> Profile
