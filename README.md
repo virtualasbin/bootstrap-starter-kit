@@ -41,7 +41,13 @@ A modern Laravel starter kit featuring a clean Bootstrap 5 design, Livewire, and
     cd bootstrap-starter-kit
     ```
 
-2. Using Git
+2. Using Composer:
+    ```bash
+    composer create-project flightsadmin/bootstrap-starter-kit
+    cd bootstrap-starter-kit
+    ```
+
+3. Using Git
 
     - Clone the repository:
         ```bash
