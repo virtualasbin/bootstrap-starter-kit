@@ -24,7 +24,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <main class="container-fluid py-4">
+        <main class="container-fluid py-2">
             @if(isset($header))
                 <header class="mb-4">
                     <h2 class="fw-medium">{{ $header }}</h2>

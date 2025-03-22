@@ -3,73 +3,62 @@
 </x-slot:sidebar>
 
 <div class="container-fluid">
-    <h2 class="fw-medium mb-4">Dashboard</h2>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-2 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-share"></i> Share
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download"></i> Export
+                </button>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-calendar3"></i> This week
+            </button>
+        </div>
+    </div>
 
-    <!-- Stats Cards -->
-    <div class="row g-3 mb-4">
-        <div class="col-12 col-sm-6 col-xl-3">
-            <div class="card border-0 shadow-sm">
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-lg-3">
+            <div class="card">
                 <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 p-3 bg-primary bg-opacity-10 rounded">
-                            <i class="bi bi-people fs-4 text-primary"></i>
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="text-muted small">Total Users</div>
-                            <div class="fs-5 fw-semibold">1,234</div>
-                        </div>
-                    </div>
+                    <h5 class="card-title">Users</h5>
+                    <p class="card-text display-6">150</p>
+                    <button class="btn btn-sm btn-primary">View Details</button>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-            <div class="card border-0 shadow-sm">
+        <div class="col-md-6 col-lg-3">
+            <div class="card">
                 <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 p-3 bg-success bg-opacity-10 rounded">
-                            <i class="bi bi-graph-up fs-4 text-success"></i>
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="text-muted small">Growth</div>
-                            <div class="fs-5 fw-semibold">12.5%</div>
-                        </div>
-                    </div>
+                    <h5 class="card-title">Revenue</h5>
+                    <p class="card-text display-6">$1,500</p>
+                    <button class="btn btn-sm btn-success">View Report</button>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-            <div class="card border-0 shadow-sm">
+        <div class="col-md-6 col-lg-3">
+            <div class="card">
                 <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 p-3 bg-warning bg-opacity-10 rounded">
-                            <i class="bi bi-clock-history fs-4 text-warning"></i>
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="text-muted small">Avg. Time</div>
-                            <div class="fs-5 fw-semibold">24m</div>
-                        </div>
-                    </div>
+                    <h5 class="card-title">Orders</h5>
+                    <p class="card-text display-6">64</p>
+                    <button class="btn btn-sm btn-info">Process</button>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-            <div class="card border-0 shadow-sm">
+        <div class="col-md-6 col-lg-3">
+            <div class="card">
                 <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 p-3 bg-info bg-opacity-10 rounded">
-                            <i class="bi bi-bell fs-4 text-info"></i>
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="text-muted small">Notifications</div>
-                            <div class="fs-5 fw-semibold">42</div>
-                        </div>
-                    </div>
+                    <h5 class="card-title">Tasks</h5>
+                    <p class="card-text display-6">25</p>
+                    <button class="btn btn-sm btn-warning">Manage</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Recent Activity -->
     <div class="card border-0 shadow-sm">
         <div class="card-header bg-transparent border-bottom-0 pb-0">
             <h5 class="card-title mb-0">Recent Activity</h5>
