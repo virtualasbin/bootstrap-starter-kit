@@ -6,19 +6,7 @@
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-2 border-bottom">
         <h3 class="fw-semibold">Settings</h3>
-        <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">
-                    <i class="bi bi-share"></i> Share
-                </button>
-                <button type="button" class="btn btn-sm btn-outline-primary">
-                    <i class="bi bi-download"></i> Export
-                </button>
-            </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-                <i class="bi bi-calendar3"></i> This week
-            </button>
-        </div>
+        <h6 class="border fw-semibold p-1" style="border-radius: 50px">{{ auth()->user()->initials() }}</h6>
     </div>
 
     <div class="row">
