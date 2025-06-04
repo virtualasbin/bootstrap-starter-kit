@@ -15,10 +15,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->app->singleton('settings', function () {
-            return Cache::rememberForever('settings', function () {
-                return Setting::all()->pluck('value', 'key')->toArray();
-            });
+        app()->singleton('settings', function () {
+            return [
+                'theme' => 'light', // Default theme
+            ];
         });
     }
 }
