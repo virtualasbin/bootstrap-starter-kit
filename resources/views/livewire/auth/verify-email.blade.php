@@ -13,6 +13,12 @@
                         </div>
                     @endif
 
+                    @if (session('status') === 'email-verified')
+                        <div class="alert alert-success" role="alert">
+                            Your email address is now automatically verified.
+                        </div>
+                    @endif
+
                     <div class="d-flex justify-content-between align-items-center">
                         <form wire:submit.prevent="sendVerification">
                             <button type="submit" class="btn btn-link btn-sm p-0 m-0">

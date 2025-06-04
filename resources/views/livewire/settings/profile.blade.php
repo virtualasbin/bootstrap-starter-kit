@@ -16,21 +16,11 @@
                     <input wire:model="email" type="email" class="form-control" id="email" required>
                     @error('email') <div class="text-danger small">{{ $message }}</div> @enderror
 
-                    @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !auth()->user()->hasVerifiedEmail())
-                        <div class="mt-2">
-                            <p class="text-muted">
-                                Your email address is unverified.
-                                <button type="button" class="btn btn-link btn-sm p-0 m-0 align-baseline"
-                                    wire:click="resendVerificationNotification">
-                                    Click here to re-send the verification email.
-                                </button>
-                            </p>
-
-                            @if (session('status') === 'verification-link-sent')
-                                <p class="text-success small">A new verification link has been sent to your email address.</p>
-                            @endif
-                        </div>
-                    @endif
+                    <div class="mt-2">
+                        <p class="text-muted">
+                            Your email address is now automatically verified.
+                        </p>
+                    </div>
                 </div>
 
                 <div>
